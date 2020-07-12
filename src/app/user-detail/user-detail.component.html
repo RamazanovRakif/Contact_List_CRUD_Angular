@@ -1,0 +1,26 @@
+<div class="card" *ngIf="user">
+  <div class="card-body">
+
+    <span class="badge badge-secondary mb-3">
+      id: {{user.id}}
+    </span>
+
+    <div class="form-group">
+      <label>User firstname</label>
+      <input class="form-control" [(ngModel)]="user.firstname">
+    </div>
+
+    <div class="form-group">
+      <label for="imageUrl">User lastname</label>
+      <input class="form-control" type="text" [(ngModel)]="user.lastname">
+    </div>
+
+    <div class="form-group">
+      <label for="imageUrl">User phone</label>
+      <input class="form-control" prefix="+994" type="text" [(ngModel)]="user.phone">
+    </div>
+
+    <button (click)="save()" class="btn btn-secondary btn-sm">Update</button>
+
+  </div>
+</div>
